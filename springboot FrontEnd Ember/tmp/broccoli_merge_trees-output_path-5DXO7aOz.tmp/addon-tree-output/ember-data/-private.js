@@ -1,0 +1,1 @@
+/home/alexander/Desktop/springbootM/springboot/springboot FrontEnd Ember/tmp/rollup-output_path-Fw4ePZMG.tmp/ember-data/-private.js

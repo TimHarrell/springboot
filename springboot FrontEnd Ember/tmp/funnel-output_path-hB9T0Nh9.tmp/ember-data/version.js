@@ -1,0 +1,1 @@
+/home/alexander/Desktop/springbootM/springboot/springboot FrontEnd Ember/tmp/creator-output_path-q039ppO7.tmp/version.js

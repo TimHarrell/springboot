@@ -1,0 +1,1 @@
+/home/alexander/Desktop/springbootM/springboot/springboot FrontEnd Ember/tmp/funnel-input_base_path-4hQzLvms.tmp/components/welcome-page.js

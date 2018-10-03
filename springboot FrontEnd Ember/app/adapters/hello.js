@@ -4,8 +4,6 @@ export default ApplicationAdapter.extend({
 pathForType(){
 
 return 'hello'
-
-
 }
 
 });

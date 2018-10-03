@@ -1,0 +1,1 @@
+/home/alexander/Desktop/springbootM/springboot/springboot FrontEnd Ember/node_modules/ember-resolver/app/initializers/container-debug-adapter.js
