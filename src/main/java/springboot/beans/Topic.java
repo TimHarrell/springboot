@@ -11,6 +11,9 @@ public class Topic {
 		this.name = name;
 		this.description = description;
 	}
+	public Topic() {
+		super();
+	}
 	public String getId() {
 		return id;
 	}
