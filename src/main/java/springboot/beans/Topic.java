@@ -1,10 +1,16 @@
 package springboot.beans;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity // marks the class so JPA knows to make a table for it
 public class Topic {
 
+	@Id // marks the id as the primary key
 	private String id;
 	private String name;
 	private String description;
+	
 	public Topic(String id, String name, String description) {
 		super();
 		this.id = id;

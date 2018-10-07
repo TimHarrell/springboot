@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import springboot.beans.Topic;
+import springboot.repositories.TopicRepository;
 
 @Service // stereotype that marks this class as a service
 public class TopicService {
-
+	@Autowired
+	private TopicRepository topicRepository; //contains the functions necessary to actual interact with the database
+	
 	private List<Topic> topics = new ArrayList<>(Arrays.asList(
 			new Topic("1", "Van der Waals Equation", "Similar to ideal gas law, which describes the state of a system, but takes into account that gas molecules influence eachother"),
 			new Topic("2", "Schrodinger Wave Equation", "Describes how the wave function of a system changes over time"),
@@ -18,6 +22,13 @@ public class TopicService {
 			));
 	
 	public List<Topic> getAllTopics() {
+		//return topics;
+		
+		// instead of messing with our hardcoded list of topics, let's actual interact with our database
+		
+		// find all is a method that CrudRepository provided to our interface
+		List<Topic> topics = new ArrayList<>();
+		topicRepository.findAll().forEach(topics::add); //iterate over all of the topics in the database and add it to our arraylist
 		return topics;
 	}
 	
@@ -30,7 +41,7 @@ public class TopicService {
 	}
 	
 	public void addTopic(Topic topic) {
-		topics.add(topic);
+		topicRepository.save(topic);
 	}
 	
 	public void updateTopic(String id, Topic topic) {
