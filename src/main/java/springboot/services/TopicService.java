@@ -37,7 +37,7 @@ public class TopicService {
 	 * lambda function doesn't need to be used, a normal for loop would suffice, but this is more elegant 
 	 */
 	public Topic getTopic(String id) { 
-		return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+		return topicRepository.findOne(id);
 	}
 	
 	public void addTopic(Topic topic) {
@@ -45,20 +45,10 @@ public class TopicService {
 	}
 	
 	public void updateTopic(String id, Topic topic) {
-		for(int i = 0; i < topics.size(); i++) {
-			if(id.equals(topics.get(i).getId())) {
-				topics.set(i, topic);
-				return;
-			}
-		}
+		topicRepository.save(topic);
 	}
 	
 	public void deleteTopic(String id) {
-		for(int i = 0; i < topics.size(); i++) {
-			if(id.equals(topics.get(i).getId())) {
-				topics.remove(i);
-				return;
-			}
-		}
+		topicRepository.delete(id);
 	}
 }

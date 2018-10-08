@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: practice
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: tim
+Built-By: lubuntu
 Implementation-Vendor-Id: com.practice
 Build-Jdk: 1.8.0_181
 Implementation-URL: http://projects.spring.io/spring-boot/springboot/
